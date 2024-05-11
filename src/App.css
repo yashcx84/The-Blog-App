@@ -16,6 +16,11 @@ header nav {
   border: 2px solid #cccccc2a;
   backdrop-filter: blur(18px);
 }
+header .leftNav {
+  letter-spacing: -2px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
 header nav .middleNav,
 nav .rightNav {
   display: flex;
