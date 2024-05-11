@@ -1,5 +1,9 @@
 
 
 export default function AdminBlogs() {
-  return <div>AdminBlogs</div>;
+  return  (
+    <div className="containerY">
+      <h1>Admin Blogs</h1>
+    </div>
+  );
 }

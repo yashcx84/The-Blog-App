@@ -1,6 +1,8 @@
 
 export default function AdminProfile() {
-  return (
-    <div>AdminProfile</div>
-  )
+  return  (
+    <div className="containerY">
+      <h1>Admin Profile</h1>
+    </div>
+  );
 }

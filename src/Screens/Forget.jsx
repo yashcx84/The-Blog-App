@@ -1,3 +1,7 @@
 export default function Forget() {
-  return <div>Forget</div>;
+  return  (
+    <div className="containerY">
+      <h1>Forget</h1>
+    </div>
+  );
 }
