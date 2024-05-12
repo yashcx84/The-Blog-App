@@ -6,6 +6,7 @@ header {
   justify-content: center;
   align-items: center;
 }
+
 header nav {
   border-radius: 12px;
   padding: 16px 20px;
@@ -13,20 +14,23 @@ header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid #cccccc2a;
+  border: 2px solid var(--color-border);
   backdrop-filter: blur(18px);
 }
+
 header .leftNav {
   letter-spacing: -2px;
   font-weight: bold;
   font-size: 1.1em;
 }
+
 header nav .middleNav,
 nav .rightNav {
   display: flex;
   align-items: center;
   gap: 12px;
 }
+
 .middleNav a,
 .rightNav a {
   text-decoration: none;
@@ -34,6 +38,7 @@ nav .rightNav {
   color: #fcfeff;
   border-radius: 12px;
 }
+
 .middleNav a::after {
   content: "";
   position: relative;
@@ -43,7 +48,7 @@ nav .rightNav {
   display: block;
   width: 6px;
   height: 6px;
-  background-color: #5900ff;
+  background-color: var(--color-tertary);
   border-radius: 999px;
   opacity: 0;
 }
@@ -53,12 +58,15 @@ header nav a.active::after {
 }
 
 header .rightNav a:first-child {
-  background-color: #4600c8;
+  background-color: var(--color-shadow);
 }
+
 header .rightNav a:nth-child(2) {
   background-color: #fcfeff1e;
 }
-header .rightNav a:hover, .middleNav a:hover {
+
+header .rightNav a:hover,
+.middleNav a:hover {
   filter: brightness(0.8);
 }
 
@@ -70,6 +78,7 @@ footer {
   justify-content: center;
   backdrop-filter: blur(16px);
 }
+
 footer div {
   font-size: 0.91em;
   font-weight: bold;
@@ -78,16 +87,20 @@ footer div {
   justify-content: space-between;
   padding: 6px;
 }
+
 footer div p {
   color: #cccccc2a;
 }
+
 footer div p span {
   color: #ffffffa8;
 }
+
 .row {
   margin: auto;
   width: 82%;
 }
+
 .welcomeContainer {
   width: 100%;
   height: 100vh;
@@ -97,40 +110,151 @@ footer div p span {
   align-items: center;
   gap: 24px;
 }
+
 .welcomeContainer h1 {
   width: 100%;
   letter-spacing: -5px;
-  text-align: center;
   font-size: clamp(4em, 6vw, 7em);
 }
+
 .welcomeContainer h1 span,
 nav h1 span {
-  color: #5900ff;
+  color: var(--color-tertary);
 }
+
 .welcomeContainer p {
-  text-align: center;
   width: 100%;
-  font-size: 1.8em;
+  font-size: 1.6em;
   margin-bottom: 20px;
   text-transform: capitalize;
 }
+
 .welcomeContainer button {
-  background-color: #5900ff;
+  background-color: var(--color-tertary);
   padding: 20px 24px;
   white-space: nowrap;
   border: none;
   border-radius: 16px;
   font-weight: bold;
-  box-shadow: 0 12px 44px #4600c8;
+  box-shadow: 0 12px 44px var(--color-shadow);
   cursor: pointer;
-  transition: box-shadow 0.2s linear;
+  transition: box-shadow 0.2s linear ease-in-out;
 }
+
 .welcomeContainer button:hover {
   box-shadow: none;
 }
-.containerY {
-  height: 100vh;
+
+
+
+.contactContainer, .docContainer {
+  gap: 20px;
+  width: 100%;
+}
+
+.contactContainer h1 {
+  margin-top: 44px;
+  font-size: clamp(2em, 3vw, 5em);
+  color: var(--color-fivth);
+}
+
+.contactContainer h1 span {
+  color: var(--color-tertary);
+}
+
+.contactContainer>p {
+  font-size: 1.4em;
+  text-transform: capitalize;
+}
+
+.contactProfileContainer {
+  width: 100%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
+  gap: 24px;
+}
+
+.contactProfileContainer .contactProfile {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-forth);
+  padding: 34px 40px;
+  border-radius: 16px;
+  flex-wrap: wrap;
+  flex-grow: 1 300px;
+  gap: 12px;
+  border: 1px solid transparent;
+}
+.contactProfile:hover {
+  border: 1px solid var(--color-tertary);
+}
+.contactInfoContainer {
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+}
+
+.contactProfile p:nth-child(2) {
+  color: var(--color-fivth);
+  letter-spacing: 1px;
+  width: 100%;
+  text-align: left;
+}
+
+.contactProfile p:first-child {
+  font-size: 1.4em;
+  font-family: var(--font-head);
+  font-weight: bold;
+  width: 100%;
+  text-align: left;
+}
+
+.contactProfile .contactImg {
+  width: 64px;
+  height: 64px;
+  border-radius: 9999px;
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.contactProfile::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  position: relative;
+  display: inline-block;
+  top: 0px;
+  background:var(--color-tertary);
+}
+
+.contactImg img {
+  width: 100%;
+}
+
+.contactIconContainer {
+  display: flex;
+  font-size: 2em;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+.contactIcons {
+  color: var(--color-secondary);
+}
+.contactIconContainer .contactIcons:hover {
+  filter: brightness(0.7);
+  cursor: pointer;
+}
+.docContainer h1 {
+  font-size: 4em;
+  text-align: left;
+}
+.docContainer p {
+  text-align: left;
 }
