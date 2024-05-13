@@ -34,7 +34,7 @@ export default function Contact() {
               <p>Web Developer</p>
             </div>
             <div className="contactIconContainer">
-              <a href="mailto:youremail@example.com"><IoMdMail className="contactIcons" /></a>
+              <a href="mailto:sarjeetkumawat221@gmail.com"><IoMdMail className="contactIcons" /></a>
               <a href="https://wa.me/8559818396"><IoLogoWhatsapp className="contactIcons" /></a>
               <a href="https://github.com/sarjeet221"><FaGithub className="contactIcons" /></a>
             </div>

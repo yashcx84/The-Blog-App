@@ -1,3 +1,9 @@
+.ButtonContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 header {
   width: 100%;
   position: fixed;
@@ -31,8 +37,7 @@ nav .rightNav {
   gap: 12px;
 }
 
-.middleNav a,
-.rightNav a {
+.middleNav a {
   text-decoration: none;
   padding: 8px 12px;
   color: #fcfeff;
@@ -53,19 +58,18 @@ nav .rightNav {
   opacity: 0;
 }
 
+nav a {
+  font-size: 1em;
+  font-weight: bold;
+  padding: 16px 20px !important;
+  white-space: nowrap;
+}
+
 header nav a.active::after {
   opacity: 1;
 }
 
-header .rightNav a:first-child {
-  background-color: var(--color-shadow);
-}
 
-header .rightNav a:nth-child(2) {
-  background-color: #fcfeff1e;
-}
-
-header .rightNav a:hover,
 .middleNav a:hover {
   filter: brightness(0.8);
 }
@@ -129,25 +133,8 @@ nav h1 span {
   text-transform: capitalize;
 }
 
-.welcomeContainer button {
-  background-color: var(--color-tertary);
-  padding: 20px 24px;
-  white-space: nowrap;
-  border: none;
-  border-radius: 16px;
-  font-weight: bold;
-  box-shadow: 0 12px 44px var(--color-shadow);
-  cursor: pointer;
-  transition: box-shadow 0.2s linear ease-in-out;
-}
-
-.welcomeContainer button:hover {
-  box-shadow: none;
-}
-
-
-
-.contactContainer, .docContainer {
+.contactContainer,
+.docContainer {
   gap: 20px;
   width: 100%;
 }
@@ -189,9 +176,11 @@ nav h1 span {
   gap: 12px;
   border: 1px solid transparent;
 }
+
 .contactProfile:hover {
   border: 1px solid var(--color-tertary);
 }
+
 .contactInfoContainer {
   display: flex;
   gap: 4px;
@@ -223,6 +212,7 @@ nav h1 span {
   justify-content: center;
   align-items: flex-start;
 }
+
 .contactProfile::before {
   content: "";
   width: 4px;
@@ -230,7 +220,7 @@ nav h1 span {
   position: relative;
   display: inline-block;
   top: 0px;
-  background:var(--color-tertary);
+  background: var(--color-tertary);
 }
 
 .contactImg img {
@@ -244,17 +234,21 @@ nav h1 span {
   justify-content: space-between;
   align-items: center;
 }
+
 .contactIcons {
   color: var(--color-secondary);
 }
+
 .contactIconContainer .contactIcons:hover {
   filter: brightness(0.7);
   cursor: pointer;
 }
+
 .docContainer h1 {
   font-size: 4em;
   text-align: left;
 }
+
 .docContainer p {
   text-align: left;
 }
