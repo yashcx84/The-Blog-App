@@ -59,6 +59,44 @@ body h3 {
   text-align: center;
 }
 
+body .myBtn {
+  padding: 20px 24px;
+  white-space: nowrap;
+  border: none;
+  border-radius: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+body .shadowBtn {
+  box-shadow: 0 12px 44px var(--color-shadow);
+}
+
+.hoverBtn:hover {
+  filter: brightness(0.8);
+  box-shadow: none;
+}
+
+body .tertaryBtn {
+  background-color: var(--color-tertary);
+  color: var(--color-secondary);
+}
+
+body .forthBtn {
+  background-color: var(--color-fivth);
+  color: #1b1b1b;
+}
+
+body .primaryBtn {
+  background-color: var(--color-primary);
+}
+
+body .secondaryBtn {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
 .containerY {
   width: 100%;
   height: 100vh;

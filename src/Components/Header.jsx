@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import "../App.css";
 export default function Header() {
   return (
@@ -15,8 +15,8 @@ export default function Header() {
             <NavLink to="/Blogs" activeClassName="active">BLOGS</NavLink>
           </div>
           <div className="rightNav">
-            <NavLink to="/Login" >LogIn</NavLink>
-            <NavLink to="/SignUp">SignUp</NavLink>
+            <Link to="/Login" className="myBtn tertaryBtn hoverBtn" >LogIn</Link>
+            <Link to="/SignUp" className="myBtn  hoverBtn forthBtn">SignUp</Link>
           </div>
         </nav>
       </header>
