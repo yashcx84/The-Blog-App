@@ -8,6 +8,7 @@ import Footer from "./Components/Footer";
 import Welcome from "./Screens/Welcome";
 import Blog from "./Screens/Blog";
 import Docs from "./Screens/Docs";
+import Login from "./Screens/Login";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/blogs" element={<Blog />} />
           <Route path="/docs" element={<Docs />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
         <Footer />
       </BrowserRouter>
