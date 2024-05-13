@@ -1,39 +1,28 @@
-import React from "react";
+import { FaInstagram } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
+import { FaTwitter } from "react-icons/fa";
+import Button from "../Components/Button";
+import { Link } from "react-router-dom";
+
 export default function SignUp() {
   return (
-    <>
-      <div className="containerY">
-
-        <div className="login-box shadowBtn">
-          <h1>Login</h1>
-          <form action="" method="post">
-            <label htmlFor="username">Username :</label>
-            <input type="text" id="username" placeholder="  Username" />
-            <label htmlFor="email">E mail :</label>
-            <input type="text" id="email" placeholder="  email" />
-            <label htmlFor="password">Password :</label>
-            <input type="password" placeholder="  Password" id="password" />
-            <label htmlFor="">Confirm Password :</label>
-            <input type="text" id="cpassword" placeholder="  confirm password" />
-
-            <input type="checkbox" name="conditions" id="t&c" /> <label htmlFor="t&c">
-              Accept terms and conditions
-            </label>
-            <button>Sign up</button>
-
-          </form>
-          <div className="login-options">
-            Log in or Sign up using
-            <div><FaInstagram />
-              <FcGoogle />
-              <FaTwitter /></div>
-
-
-
-
+    <div className="containerY">
+      <div className="login-box">
+        <form action="" method="post">
+          <input type="email" placeholder="Email" id="number" />
+          <input type="text" placeholder="Username" id="username" />
+          <input type="password" placeholder="Password" id="password" />
+          <Button className="myBtn tertaryBtn hoverBtn" text="SignUp" />
+          <Link to="/login" className="hoverBtn">Already Have an Account?<span> LogIn</span></Link>
+        </form>
+        <div className="login-options">
+          <div className="logIcons">
+            <FaInstagram className="logIcon hoverBtn" />
+            <FcGoogle className="logIcon hoverBtn" />
+            <FaTwitter className="logIcon hoverBtn" />
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

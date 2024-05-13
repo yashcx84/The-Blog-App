@@ -11,6 +11,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 999;
 }
 
 header nav {
@@ -32,19 +33,58 @@ header .leftNav {
 
 header nav .middleNav,
 nav .rightNav {
+  justify-content: center;
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.middleNav a {
+.rightNav .navToggle {
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6em;
+  border: 2px solid var(--color-forth);
+  border-radius: 100%;
+  padding: 8px;
+  display: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.toggleContainer {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  opacity: 0;
+  display: none;
+  background-color: var(--color-primary);
+  transform: translateX(1000px);
+  transition: all 0.3s ease-in-out;
+}
+
+/* .showToggle {
+  opacity: 1;
+  display: flex;
+  transform: translateX(0px);
+} */
+
+
+.middleNav a,
+.toggleContainer a {
   text-decoration: none;
   padding: 8px 12px;
   color: #fcfeff;
   border-radius: 12px;
 }
 
-.middleNav a::after {
+.middleNav a::after,
+.toggleContainer a::after {
   content: "";
   position: relative;
   left: 50%;
@@ -65,7 +105,8 @@ nav a {
   white-space: nowrap;
 }
 
-header nav a.active::after {
+header nav a.active::after,
+.toggleContainer a.active::after {
   opacity: 1;
 }
 
@@ -89,11 +130,13 @@ footer div {
   width: 82%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 6px;
 }
 
 footer div p {
   color: #cccccc2a;
+  width: auto;
 }
 
 footer div p span {
@@ -118,7 +161,7 @@ footer div p span {
 .welcomeContainer h1 {
   width: 100%;
   letter-spacing: -5px;
-  font-size: clamp(4em, 6vw, 7em);
+  font-size: clamp(3em, 6vw, 6em);
 }
 
 .welcomeContainer h1 span,
@@ -128,7 +171,7 @@ nav h1 span {
 
 .welcomeContainer p {
   width: 100%;
-  font-size: 1.6em;
+  font-size: clamp(1em, 4vw, 1.5em);
   margin-bottom: 20px;
   text-transform: capitalize;
 }
@@ -262,26 +305,67 @@ nav h1 span {
 
 
 /* for login screen  */
-.login-box{
-  border: 2px solid var(--color-primary);
-
+.login-box {
+  width: 400px;
+  padding: 24px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 44px;
+  background-color: var(--color-forth);
 }
-.login-box form{
+
+.login-box h2 {
+  font-size: 2em;
+}
+
+.login-box form {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
 }
 
-.login-box form input{
-  margin: 10px 0;
-    border-radius: 7px;
-    border: none;
-    line-height: 2rem;
+.login-box form input {
+  width: 100%;
+  border-radius: 12px;
+  padding: 20px 24px;
+  border: none;
+  transition: all 0.3s ease-in;
 }
-.login-box a{
 
-display: flex;
-justify-content: center;
-color: aquamarine;
+.login-box form input:focus {
+  box-shadow: 0 0 0 2px var(--color-tertary);
+}
 
+.login-box a {
+  display: flex;
+  justify-content: center;
+  color: var(--color-fivth);
+}
 
+.login-box a span {
+  color: var(--color-secondary);
+}
+
+.login-box .logIcons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.logIcons .logIcon {
+  font-size: 3.3em;
+  background-color: var(--color-secondary);
+  padding: 16px;
+  border-radius: 999px;
+  color: var(--color-primary);
+  cursor: pointer;
 }

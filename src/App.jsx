@@ -10,6 +10,7 @@ import Blog from "./Screens/Blog";
 import Docs from "./Screens/Docs";
 import Login from "./Screens/Login";
 import SignUp from "./Screens/SignUp";
+import Forget from "./Screens/Forget";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/docs" element={<Docs />} />
           <Route path="/login" element={<Login />} />
           <Route path="/SignUp" element={<SignUp />} />
+          <Route path="/Forget" element={<Forget />} />
         </Routes>
         <Footer />
       </BrowserRouter>

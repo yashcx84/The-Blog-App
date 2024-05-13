@@ -31,7 +31,12 @@
 body {
   background-color: var(--color-primary);
   color: var(--color-secondary);
-  font-family: var(--font-default)
+  font-family: var(--font-default);
+  overflow: hidden;
+}
+
+body input:focus {
+  outline: none;
 }
 
 body a {
@@ -107,15 +112,31 @@ body .secondaryBtn {
 }
 
 @media (max-width: 768px) {
+
+  header nav,
+  footer div {
+    width: 94%;
+  }
+
   .row {
     width: 94%;
   }
 
-  header nav .middleNav {
+  .rightNav a {
     display: none;
+  }
+
+  .rightNav .navToggle {
+    display: flex;
   }
 
   .contactContainer .contactProfile {
     width: 100%;
+  }
+}
+
+@media (max-width:860px) {
+  header nav .middleNav {
+    display: none;
   }
 }
